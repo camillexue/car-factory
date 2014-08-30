@@ -25,3 +25,15 @@ secondCar.automaticOption = false
 println("My first car is a \(firstCar.color) \(firstCar.name).")
 println("My second car is a \(secondCar.color) \(secondCar.name).")
 println("My \(firstCar.name) is better than my \(secondCar.name).")
+
+firstCar.description()      //method call
+secondCar.description()
+
+var firstFlower = FlowerBouquet()
+firstFlower.setUpDetails("Rose", colorOfFlower: "Red", numberOfPetals: 12, thornsRemoved: false)
+
+var secondFlower = FlowerBouquet()
+secondFlower.setUpDetails("Daisy", colorOfFlower: "White", numberOfPetals: 6, thornsRemoved: true)
+
+firstFlower.flowerDescription()
+secondFlower.flowerDescription()

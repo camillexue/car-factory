@@ -13,4 +13,27 @@ class CarFactory {
     var color = ""
     var horsepower = 0
     var automaticOption = false
+    
+    func description() {            //method
+        println("I have a \(color) \(name).")
+    }
+}
+
+class FlowerBouquet {
+    var name = ""
+    var color = ""
+    var petals = 0
+    var thorns = ""
+    
+    //this method takes arguments and assigns them to objects, external parameters, first argument already included(name)
+    func setUpDetails(nameOfFlower: String, colorOfFlower: String, numberOfPetals: Int, thornsRemoved: Bool) {
+        self.name = nameOfFlower
+        self.color = colorOfFlower
+        self.petals = numberOfPetals
+        self.thorns = (thornsRemoved ? "De-Thorned" : "Thorns") //self. clarifies that it is an instance variable with this name, (another variable might share the same name)
+    }
+    
+    func flowerDescription() {
+        println("Flower Description: \(color) \(name), \(petals) petals, \(thorns)")
+    }
 }
